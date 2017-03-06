@@ -1,0 +1,44 @@
+.ama-cards{
+  md-card{
+    min-height: 160px;
+    margin: 10px 0;
+  }
+  md-card-header{
+    margin-bottom: 15px;
+  }
+  md-card-content p{
+    height: 4rem;
+  }
+  md-card-actions {
+    md-icon{
+      font-size: 20px;
+    }
+    button{
+      border-radius: 5px;
+      &:last-child{
+        border: 1px solid #ccc;
+        float: right;
+      }
+    }
+  }
+}
+
+.header-action{
+  position: absolute;
+  right: 20px;
+  font-size: 30px;
+  color: orange;
+}
+.sub-action{
+  display: inline-block;
+  md-chip{
+    padding: 5px 10px;
+  }
+}
+.image-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-image: url('http://placehold.it/32x32');
+  background-size: cover;
+}

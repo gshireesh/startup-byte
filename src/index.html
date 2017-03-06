@@ -9,6 +9,51 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root>Loading...</app-root>
+<app-root>
+
+  <style>
+    .centerEverything {
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      text-align:center;
+      justify-content: center;
+    }
+  </style>
+  <div class="centerEverything">
+    <div>
+      <img src="assets/logo_small.png"/><br/>
+      <h4 id="random-quote"></h4>
+    </div>
+    <script>
+      function generateRandomQuote() {
+        var randomQuoteNumber = Math.floor((Math.random() * 18));
+        var randomQuotes= [
+          "It’s not about ideas. It's about making them happen - Scott Belsky, Behance",
+          "Sweat equity is the best startup capital - Mark Cuban, HDNET",
+          "There is only one boss. The customer – Sam Walton, Walmart",
+          "Screw it, Let’s do it – Richard Branson, Virgin",
+          "I want to do one thing and do it well – Jan Koum, Whatsapp",
+          "Markets come and go. Good businesses don’t – Fred Wilson, Union Square Ventures",
+          "Don’t worry about failure, you only have to be right once – Drew Houston, Dropbox",
+          "Ideas are commodity. Execution of them is not – Michael Dell, Dell",
+          "Do what you love and rest will come – Dennis Crowley, Foursquare",
+          "Be so sharp that you cut – Vijay Shekhar Sharma, Paytm",
+          "You can never switch off – Sachin Bansal, Flipkart",
+          "Stay Hungry Stay Foolish - Steve Jobs, Apple",
+          "The best way to predict the future is create it – Peter Drucker",
+          "The only way to win is learn faster than anyone else – Eric Ries, Lean Startup",
+          "You can change your future by changing your attitude.",
+          "There is one rule. There are no rules!",
+          "I could either watch it happen or be part of it – Elon Musk, Tesla"
+        ];
+        if(!!document && !!document.getElementById('random-quote')) {
+          document.getElementById('random-quote').innerHTML = randomQuotes[randomQuoteNumber];
+        }
+      }
+      generateRandomQuote();
+    </script>
+
+</app-root>
 </body>
 </html>

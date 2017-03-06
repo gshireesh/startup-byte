@@ -1,40 +1,22 @@
-<md-toolbar color="primary">
-  <img height="50px" src="http://startupbyte.com/assets/images/logo_small.png"/>
-  <span class="spacer"></span>
-  <md-icon class="toolbar-icon">search</md-icon>
-</md-toolbar>
-<div class="container">
-  <div class="bubble">
-    <span>AMA</span>
-    <md-icon>cancel</md-icon>
+<md-sidenav-container>
+  <md-sidenav #sidenav class="app-sidenav">
+    <img height="50px" src="http://startupbyte.com/assets/images/logo_small.png"/>
+    <hr/>
+    <md-list>
+      <h3 md-subheader>Test Links</h3>
+      <md-list-item> Ask Me Anything </md-list-item>
+      <md-list-item> Topics </md-list-item>
+      <md-list-item> Login </md-list-item>
+    </md-list>
+  </md-sidenav>
+  <div class="app-sidenav-content">
+    <md-toolbar color="primary">
+      <md-icon (click)="sidenav.open()">menu</md-icon>
+      &nbsp;&nbsp;
+      <img height="50px" src="http://startupbyte.com/assets/images/logo_small.png"/>
+      <span class="spacer"></span>
+      <md-icon class="toolbar-icon">search</md-icon>
+    </md-toolbar>
+    <router-outlet></router-outlet>
   </div>
-  <div class="sub-nav">
-    <a href="#" class="active">RECENTLY ADDED</a> |
-    <a href="#">POPULAR</a> |
-    <a href="#">TRENDING</a>
-  </div>
-  <div class="row ama-cards">
-    <div class="col-md-4" *ngFor="let amaItem of amaData">
-      <md-card>
-        <md-card-header>
-          <div md-card-avatar class="image-icon" [style.background-image]="'url(' + amaItem.picture + ')'"></div>
-          <md-card-title>{{amaItem.name}}</md-card-title>
-          <md-card-subtitle>{{amaItem.department}}</md-card-subtitle>
-          <md-icon class="header-action">date_range</md-icon>
-        </md-card-header>
-        <!--<img md-card-image src="assets/img/examples/shiba2.jpg">-->
-        <md-card-content>
-          <p>
-            {{ amaItem.post}}
-          </p>
-          <b>{{ amaItem.time }}</b>
-        </md-card-content>
-        <md-card-actions>
-          <button md-button class="small"><md-icon>favorite</md-icon>{{amaItem.likes}}</button>
-          <button md-button class="small"><md-icon>chat_bubble</md-icon>{{amaItem.comments}}</button>
-          <button md-button class="r"><md-icon>date_range</md-icon>REMIND</button>
-        </md-card-actions>
-      </md-card>
-    </div>
-  </div>
-</div>
+</md-sidenav-container>

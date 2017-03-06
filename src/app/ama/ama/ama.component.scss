@@ -1,0 +1,23 @@
+.bubble{
+  background-color : gold;
+  padding: 20px 10px;
+  font-size: 20px;
+  md-icon{
+    float: right;
+  }
+}
+.sub-nav{
+  text-align: right;
+  padding: 10px;
+  background: whitesmoke;
+  border: 1px solid whitesmoke;
+  a{
+    text-decoration: none;
+    color: #999;
+    font-family: "helvetica Neue", "Helvetica", sans-serif;
+    &.active{
+      color: black;
+    }
+  }
+}
+

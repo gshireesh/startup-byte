@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="bubble">
+    <span>AMA</span>
+    <md-icon>cancel</md-icon>
+  </div>
+  <div class="sub-nav">
+    <a routerLinkActive="active" [routerLink]="'/ama/recent'">RECENTLY ADDED</a> |
+    <a routerLinkActive="active" [routerLink]="'/ama/popular'">POPULAR</a> |
+    <a routerLinkActive="active" [routerLink]="'/ama/trending'">TRENDING</a>
+  </div>
+  <router-outlet></router-outlet>
+</div>

@@ -3,7 +3,7 @@
 # compiled output
 /dist
 /tmp
-
+/cordova/platforms
 # dependencies
 /node_modules
 

@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>StartupByte</title>
+  <base href=".">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link href="styles.400034591cf93e1928e8.bundle.css" rel="stylesheet"/></head>
+<body>
+<app-root>
+
+  <style>
+    .centerEverything {
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      text-align:center;
+      justify-content: center;
+    }
+  </style>
+  <div class="centerEverything">
+    <div>
+      <img src="assets/logo_small.png"/><br/>
+      <h4 id="random-quote"></h4>
+    </div>
+    <script>
+      function generateRandomQuote() {
+        var randomQuoteNumber = Math.floor((Math.random() * 18));
+        var randomQuotes= [
+          "It’s not about ideas. It's about making them happen - Scott Belsky, Behance",
+          "Sweat equity is the best startup capital - Mark Cuban, HDNET",
+          "There is only one boss. The customer – Sam Walton, Walmart",
+          "Screw it, Let’s do it – Richard Branson, Virgin",
+          "I want to do one thing and do it well – Jan Koum, Whatsapp",
+          "Markets come and go. Good businesses don’t – Fred Wilson, Union Square Ventures",
+          "Don’t worry about failure, you only have to be right once – Drew Houston, Dropbox",
+          "Ideas are commodity. Execution of them is not – Michael Dell, Dell",
+          "Do what you love and rest will come – Dennis Crowley, Foursquare",
+          "Be so sharp that you cut – Vijay Shekhar Sharma, Paytm",
+          "You can never switch off – Sachin Bansal, Flipkart",
+          "Stay Hungry Stay Foolish - Steve Jobs, Apple",
+          "The best way to predict the future is create it – Peter Drucker",
+          "The only way to win is learn faster than anyone else – Eric Ries, Lean Startup",
+          "You can change your future by changing your attitude.",
+          "There is one rule. There are no rules!",
+          "I could either watch it happen or be part of it – Elon Musk, Tesla"
+        ];
+        if(!!document && !!document.getElementById('random-quote')) {
+          document.getElementById('random-quote').innerHTML = randomQuotes[randomQuoteNumber];
+        }
+      }
+      generateRandomQuote();
+    </script>
+
+</app-root>
+<script type="text/javascript" src="inline.8e2bd2078d4083b4fbf2.bundle.js"></script><script type="text/javascript" src="polyfills.6e924743f1cece43aa1a.bundle.js"></script><script type="text/javascript" src="vendor.ff00a429e090ea92f953.bundle.js"></script><script type="text/javascript" src="main.294fd2f6998c3d248bc0.bundle.js"></script></body>
+</html>

@@ -4,8 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import {MaterialModule, MdCardModule, MdToolbarModule, MdIconModule} from "@angular/material";
+import {MaterialModule} from "@angular/material";
 import 'hammerjs';
+import {AppRoutingModule} from "./app.routing,module";
 
 
 @NgModule({
@@ -14,8 +15,9 @@ import 'hammerjs';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
-    MaterialModule,
+    MaterialModule.forRoot(),
     HttpModule
   ],
   providers: [],

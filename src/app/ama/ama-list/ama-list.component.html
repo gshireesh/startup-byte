@@ -1,0 +1,24 @@
+<div class="row ama-cards">
+  <div class="col-md-4" *ngFor="let amaItem of amaData">
+    <md-card>
+      <md-card-header>
+        <div md-card-avatar class="image-icon" [style.background-image]="'url(' + amaItem.picture + ')'"></div>
+        <md-card-title>{{amaItem.name}}</md-card-title>
+        <md-card-subtitle>{{amaItem.department}}</md-card-subtitle>
+        <md-icon class="header-action">date_range</md-icon>
+      </md-card-header>
+      <!--<img md-card-image src="assets/img/examples/shiba2.jpg">-->
+      <md-card-content>
+        <p>
+          {{ amaItem.post}}
+        </p>
+        <b>{{ amaItem.time }}</b>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button class="small"><md-icon>favorite</md-icon>{{amaItem.likes}}</button>
+        <button md-button class="small"><md-icon>chat_bubble</md-icon>{{amaItem.comments}}</button>
+        <button md-button class="r"><md-icon>date_range</md-icon>REMIND</button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>
